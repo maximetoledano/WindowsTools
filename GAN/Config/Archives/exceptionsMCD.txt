@@ -1,0 +1,48 @@
+############################################################
+# 
+# $Workfile: exceptionsMCD.txt $
+# $Revision: 12 $
+# $Date: 3/11/03 14:46 $
+# $Author: Mtoledano $
+# 
+############################################################
+
+# Suppression des nombres inutiles
+(.*)\.[0-9]+(.*)=$1.$2
+
+# Reconduction des abreviations d'identification des applications O2
+A00(.*)=A00#$1
+(.*)\.A00(.*)=$1.A00#$2
+A10(.*)=A10#$1
+(.*)\.A10(.*)=$1.A10#$2
+A20(.*)=A20#$1
+(.*)\.A20(.*)=$1.A20#$2
+A25(.*)=A25#$1
+(.*)\.A25(.*)=$1.A25#$2
+A40(.*)=A40#$1
+(.*)\.A40(.*)=$1.A40#$2
+A50(.*)=A50#$1
+(.*)\.A50(.*)=$1.A50#$2
+
+# Reconduction des abreviations specifiques UML/Rose/VB
+(.*)\.UseCaseView\.RecueilBesoins(.*)=$1.UCV.RB.$2
+(.*)\.UseCaseView(.*)=$1.UCV.$2
+(.*)\.LogicalView\.ConceptionTechnique(.*)=$1.LGV.CT.$2
+(.*)\.LogicalView\.Analyse(.*)=$1.LGV.AN.$2
+(.*)\.LogicalView(.*)=$1.LGV.$2
+(.*)\.ComponentView\.ConceptionTechnique(.*)=$1.CMV.CT.$2
+(.*)\.ComponentView(.*)=$1.CMV.$2
+
+# Reconduction des abreviations specifiques Octalis2
+(.*)\.VOD(.*)=$1.VOD.$2
+(.*)\.MET(.*)=$1.MET.$2
+(.*)\.FAM(.*)=$1.FAM.$2
+
+# Conversion explicite des chaines conflictuelles
+(.*)SENSSE(.*)=$1#SEN-SSE#$2
+(.*)Liens?Ligne(.*)=$1#LNK-LIG#$2
+(.*)Fenetres?Parente(.*)=$1#FEN-PART#$2
+(.*)EstOptionnel(le)?(.*)=$1#B-OPT#$3
+(.*)EnvoiEDI(.*)=$1#ENV-EDI#$2
+(.*)Classes?Parente(.*)=$1#CLS-PART#$2
+(.*)Accords?Edition(.*)=$1#ACO-EDT#$2

@@ -1,0 +1,43 @@
+############################################################
+# 
+# $Workfile: exceptionsUML.txt $
+# $Revision: 9 $
+# $Date: 3/11/03 14:46 $
+# $Author: Mtoledano $
+# 
+############################################################
+
+# Suppression des nombres inutiles
+(.*)\.[0-9]+(.*)=$1.$2
+
+# Mis en evidence des liens entre vues
+(.*)\.LV$=$1.LNK-LGV
+
+# Demande d'annulation des elements du Framework Microsoft
+(.*)\.FrameworkOverview$=#
+(.*)\.FrameworkOverview\.(.*)=#
+(.*)\.COM$=#
+(.*)\.COM\.(.*)=#
+
+# Reconduction des abreviations specifiques UML/Rose/VB
+(.*)\.UseCaseView\.RecueilBesoins(.*)=$1.UCV.RB.$2
+(.*)\.UseCaseView(.*)=$1.UCV.$2
+(.*)\.LogicalView\.ConceptionTechnique(.*)=$1.LGV.CT.$2
+(.*)\.LogicalView\.Analyse(.*)=$1.LGV.AN.$2
+(.*)\.LogicalView(.*)=$1.LGV.$2
+(.*)\.ComponentView\.ConceptionTechnique(.*)=$1.CMV.CT.$2
+(.*)\.ComponentView(.*)=$1.CMV.$2
+
+# Reconduction des abreviations specifiques Octalis2
+(.*)\.VOD(.*)=$1.VOD.$2
+(.*)\.MET(.*)=$1.MET.$2
+(.*)\.FAM(.*)=$1.FAM.$2
+
+# Conversion explicite des chaines conflictuelles
+(.*)SENSSE(.*)=$1#SEN-SSE#$2
+(.*)Liens?Ligne(.*)=$1#LNK-LIG#$2
+(.*)Fenetres?Parente(.*)=$1#FEN-PART#$2
+(.*)EstOptionnel(le)?(.*)=$1#B-OPT#$3
+(.*)EnvoiEDI(.*)=$1#ENV-EDI#$2
+(.*)Classes?Parente(.*)=$1#CLS-PART#$2
+(.*)Accords?Edition(.*)=$1#ACO-EDT#$2
