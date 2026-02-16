@@ -1,0 +1,31 @@
+
+# -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+# preparation initiale du fichier source
+
+# suppression des espaces inutiles
+*=s/\s+\(/(/gims
+*=s/\(\s+/(/gims
+*=s/\s+\)/)/gims
+*=s/\s+,/,/gims
+*=s/,\s+/,/gims
+*=s/\s+=/=/gims
+*=s/=\s+/=/gims
+*=s/\s+!=/!=/gims
+*=s/!=\s+/!=/gims
+*=s/!\s+/!/gims
+*=s/^\s+//gims
+*=s/\s+$//gims
+
+# suppression des lignes de commentaires
+*=s/^\s*\/\/[^\n]*?\n//gims
+*=s/\/\/[^\n]*?\n//gims
+
+# concatenation des blocs de code
+*=s/{\s*\n/{/gims
+*=s/\n\s*}/}/gims
+*=s/;\s*\n/;/gims
+
+# suppression des lignes vides restantes
+*=s/\n^\s*\n/\n/gims
+
+# -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-

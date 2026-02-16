@@ -1,0 +1,225 @@
+
+# -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+# Declaration des variables d'instances memorisant l'etat des filtres
+# -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+# Template  ==> DeclVarBool
+# Variables ==> DscEltMdl
+#               CodeEltMdl
+#               NomEltMdl
+# -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+
+SeparBlocs|NomTpl=DeclVarBool
+
+DeclVarBool|DscEltMdl=RoseObject Element Diagram|CodeEltMdl=100000000000000000000000000000000000000000000|NomEltMdl=EltDgm
+DeclVarBool|DscEltMdl=RoseObject Element Diagram ClassDiagram|CodeEltMdl=110000000000000000000000000000000000000000000|NomEltMdl=EltDgmClsDgm
+DeclVarBool|DscEltMdl=RoseObject Element Diagram ClassDiagram ClassDiagram|CodeEltMdl=111000000000000000000000000000000000000000000|NomEltMdl=EltDgmClsDgmClsDgm
+DeclVarBool|DscEltMdl=RoseObject Element Diagram ClassDiagram UseCaseDiagram|CodeEltMdl=110100000000000000000000000000000000000000000|NomEltMdl=EltDgmClsDgmUseCasDgm
+DeclVarBool|DscEltMdl=RoseObject Element Diagram DeploymentDiagram|CodeEltMdl=100010000000000000000000000000000000000000000|NomEltMdl=EltDgmDplDgm
+DeclVarBool|DscEltMdl=RoseObject Element Diagram ModuleDiagram|CodeEltMdl=100001000000000000000000000000000000000000000|NomEltMdl=EltDgmModDgm
+DeclVarBool|DscEltMdl=RoseObject Element Diagram ScenarioDiagram|CodeEltMdl=100000100000000000000000000000000000000000000|NomEltMdl=EltDgmScnDgm
+DeclVarBool|DscEltMdl=RoseObject Element Diagram ScenarioDiagram CollaborationDiagram|CodeEltMdl=100000110000000000000000000000000000000000000|NomEltMdl=EltDgmScnDgmClbDgm
+DeclVarBool|DscEltMdl=RoseObject Element Diagram ScenarioDiagram SequenceDiagram|CodeEltMdl=100000101000000000000000000000000000000000000|NomEltMdl=EltDgmScnDgmSeqDgm
+DeclVarBool|DscEltMdl=RoseObject Element Diagram StateDiagram|CodeEltMdl=100000000100000000000000000000000000000000000|NomEltMdl=EltDgmSttDgm
+DeclVarBool|DscEltMdl=RoseObject Element Diagram StateDiagram ActivityDiagram|CodeEltMdl=100000000110000000000000000000000000000000000|NomEltMdl=EltDgmSttDgmActDgm
+DeclVarBool|DscEltMdl=RoseObject Element Diagram StateDiagram StateDiagram|CodeEltMdl=100000000101000000000000000000000000000000000|NomEltMdl=EltDgmSttDgmSttDgm
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem Association|CodeEltMdl=000000000000100000000000000000000000000000000|NomEltMdl=EltRseItmAss
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem Attribute|CodeEltMdl=000000000000010000000000000000000000000000000|NomEltMdl=EltRseItmAtb
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem Class|CodeEltMdl=000000000000001000000000000000000000000000000|NomEltMdl=EltRseItmCls
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem ControllableUnit|CodeEltMdl=000000000000000100000000000000000000000000000|NomEltMdl=EltRseItmCtlUnt
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem ControllableUnit DefaultModelProperties|CodeEltMdl=000000000000000110000000000000000000000000000|NomEltMdl=EltRseItmCtlUntDftMdlPrp
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem ControllableUnit DeploymentUnit|CodeEltMdl=000000000000000101000000000000000000000000000|NomEltMdl=EltRseItmCtlUntDplUnt
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem ControllableUnit Package|CodeEltMdl=000000000000000100100000000000000000000000000|NomEltMdl=EltRseItmCtlUntPkg
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem ControllableUnit Package Category|CodeEltMdl=000000000000000100110000000000000000000000000|NomEltMdl=EltRseItmCtlUntPkgCtg
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem ControllableUnit Package Model|CodeEltMdl=000000000000000100101000000000000000000000000|NomEltMdl=EltRseItmCtlUntPkgMdl
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem ControllableUnit Package SubSystem|CodeEltMdl=000000000000000100100100000000000000000000000|NomEltMdl=EltRseItmCtlUntPkgSubSys
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem Link|CodeEltMdl=000000000000000000000010000000000000000000000|NomEltMdl=EltRseItmLnk
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem Message|CodeEltMdl=000000000000000000000001000000000000000000000|NomEltMdl=EltRseItmMsg
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem Module|CodeEltMdl=000000000000000000000000100000000000000000000|NomEltMdl=EltRseItmMod
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem ObjectInstance|CodeEltMdl=000000000000000000000000010000000000000000000|NomEltMdl=EltRseItmObjIns
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem Operation|CodeEltMdl=000000000000000000000000001000000000000000000|NomEltMdl=EltRseItmOpr
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem Parameter|CodeEltMdl=000000000000000000000000000100000000000000000|NomEltMdl=EltRseItmPrm
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem Relation|CodeEltMdl=000000000000000000000000000010000000000000000|NomEltMdl=EltRseItmRel
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem Relation CategoryDependency|CodeEltMdl=000000000000000000000000000011000000000000000|NomEltMdl=EltRseItmRelCtgDep
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem Relation ClassRelation|CodeEltMdl=000000000000000000000000000010100000000000000|NomEltMdl=EltRseItmRelClsRel
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem Relation ClassRelation ClassDependency|CodeEltMdl=000000000000000000000000000010110000000000000|NomEltMdl=EltRseItmRelClsRelClsDep
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem Relation ClassRelation HasRelationShip|CodeEltMdl=000000000000000000000000000010101000000000000|NomEltMdl=EltRseItmRelClsRelHasRls
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem Relation ClassRelation InheritRelation|CodeEltMdl=000000000000000000000000000010100100000000000|NomEltMdl=EltRseItmRelClsRelInhRel
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem Relation ClassRelation InstantiateRelation|CodeEltMdl=000000000000000000000000000010100010000000000|NomEltMdl=EltRseItmRelClsRelIntRel
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem Relation ConnectionRelation|CodeEltMdl=000000000000000000000000000010000001000000000|NomEltMdl=EltRseItmRelConRel
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem Relation DependencyRelation|CodeEltMdl=000000000000000000000000000010000000100000000|NomEltMdl=EltRseItmRelDepRel
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem Relation DependencyRelation ObjectFlow|CodeEltMdl=000000000000000000000000000010000000110000000|NomEltMdl=EltRseItmRelDepRelObjFlw
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem Relation ModuleVisibilityRelationShip|CodeEltMdl=000000000000000000000000000010000000001000000|NomEltMdl=EltRseItmRelModVsbRls
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem Relation RealizeRelation|CodeEltMdl=000000000000000000000000000010000000000100000|NomEltMdl=EltRseItmRelRlzRel
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem Relation Role|CodeEltMdl=000000000000000000000000000010000000000010000|NomEltMdl=EltRseItmRelRol
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem Relation Transition|CodeEltMdl=000000000000000000000000000010000000000001000|NomEltMdl=EltRseItmRelTrn
+DeclVarBool|DscEltMdl=RoseObject Element RoseItem UseCase|CodeEltMdl=000000000000000000000000000000000000000000100|NomEltMdl=EltRseItmUseCas
+DeclVarBool|DscEltMdl=RoseObject Element StateMachine|CodeEltMdl=000000000000000000000000000000000000000000010|NomEltMdl=EltSttMch
+DeclVarBool|DscEltMdl=RoseObject External Document|CodeEltMdl=000000000000000000000000000000000000000000001|NomEltMdl=ExtDoc
+
+# -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+# Initialisation des variables d'instances (corps de Class_Initialize)
+# -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+# Template  ==> DeclInitVar
+# Variables ==> NomEltMdl
+# -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+
+SeparBlocs|NomTpl=DeclInitVar
+
+DeclInitVar|NomEltMdl=EltDgm
+DeclInitVar|NomEltMdl=EltDgmClsDgm
+DeclInitVar|NomEltMdl=EltDgmClsDgmClsDgm
+DeclInitVar|NomEltMdl=EltDgmClsDgmUseCasDgm
+DeclInitVar|NomEltMdl=EltDgmDplDgm
+DeclInitVar|NomEltMdl=EltDgmModDgm
+DeclInitVar|NomEltMdl=EltDgmScnDgm
+DeclInitVar|NomEltMdl=EltDgmScnDgmClbDgm
+DeclInitVar|NomEltMdl=EltDgmScnDgmSeqDgm
+DeclInitVar|NomEltMdl=EltDgmSttDgm
+DeclInitVar|NomEltMdl=EltDgmSttDgmActDgm
+DeclInitVar|NomEltMdl=EltDgmSttDgmSttDgm
+DeclInitVar|NomEltMdl=EltRseItmAss
+DeclInitVar|NomEltMdl=EltRseItmAtb
+DeclInitVar|NomEltMdl=EltRseItmCls
+DeclInitVar|NomEltMdl=EltRseItmCtlUnt
+DeclInitVar|NomEltMdl=EltRseItmCtlUntDftMdlPrp
+DeclInitVar|NomEltMdl=EltRseItmCtlUntDplUnt
+DeclInitVar|NomEltMdl=EltRseItmCtlUntPkg
+DeclInitVar|NomEltMdl=EltRseItmCtlUntPkgCtg
+DeclInitVar|NomEltMdl=EltRseItmCtlUntPkgMdl
+DeclInitVar|NomEltMdl=EltRseItmCtlUntPkgSubSys
+DeclInitVar|NomEltMdl=EltRseItmLnk
+DeclInitVar|NomEltMdl=EltRseItmMsg
+DeclInitVar|NomEltMdl=EltRseItmMod
+DeclInitVar|NomEltMdl=EltRseItmObjIns
+DeclInitVar|NomEltMdl=EltRseItmOpr
+DeclInitVar|NomEltMdl=EltRseItmPrm
+DeclInitVar|NomEltMdl=EltRseItmRel
+DeclInitVar|NomEltMdl=EltRseItmRelCtgDep
+DeclInitVar|NomEltMdl=EltRseItmRelClsRel
+DeclInitVar|NomEltMdl=EltRseItmRelClsRelClsDep
+DeclInitVar|NomEltMdl=EltRseItmRelClsRelHasRls
+DeclInitVar|NomEltMdl=EltRseItmRelClsRelInhRel
+DeclInitVar|NomEltMdl=EltRseItmRelClsRelIntRel
+DeclInitVar|NomEltMdl=EltRseItmRelConRel
+DeclInitVar|NomEltMdl=EltRseItmRelDepRel
+DeclInitVar|NomEltMdl=EltRseItmRelDepRelObjFlw
+DeclInitVar|NomEltMdl=EltRseItmRelModVsbRls
+DeclInitVar|NomEltMdl=EltRseItmRelRlzRel
+DeclInitVar|NomEltMdl=EltRseItmRelRol
+DeclInitVar|NomEltMdl=EltRseItmRelTrn
+DeclInitVar|NomEltMdl=EltRseItmUseCas
+DeclInitVar|NomEltMdl=EltSttMch
+DeclInitVar|NomEltMdl=ExtDoc
+
+# -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+# Declaration des proprietes induites pour gerer l'etat des filtres
+# -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+# Template  ==> DeclPrpCls
+# Variables ==> DscEltMdl
+#               CodeEltMdl
+#               NomEltMdl
+# -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+
+SeparBlocs|NomTpl=DeclPrpCls
+
+DeclPrpCls|DscEltMdl=RoseObject Element Diagram|CodeEltMdl=100000000000000000000000000000000000000000000|NomEltMdl=EltDgm
+DeclPrpCls|DscEltMdl=RoseObject Element Diagram ClassDiagram|CodeEltMdl=110000000000000000000000000000000000000000000|NomEltMdl=EltDgmClsDgm
+DeclPrpCls|DscEltMdl=RoseObject Element Diagram ClassDiagram ClassDiagram|CodeEltMdl=111000000000000000000000000000000000000000000|NomEltMdl=EltDgmClsDgmClsDgm
+DeclPrpCls|DscEltMdl=RoseObject Element Diagram ClassDiagram UseCaseDiagram|CodeEltMdl=110100000000000000000000000000000000000000000|NomEltMdl=EltDgmClsDgmUseCasDgm
+DeclPrpCls|DscEltMdl=RoseObject Element Diagram DeploymentDiagram|CodeEltMdl=100010000000000000000000000000000000000000000|NomEltMdl=EltDgmDplDgm
+DeclPrpCls|DscEltMdl=RoseObject Element Diagram ModuleDiagram|CodeEltMdl=100001000000000000000000000000000000000000000|NomEltMdl=EltDgmModDgm
+DeclPrpCls|DscEltMdl=RoseObject Element Diagram ScenarioDiagram|CodeEltMdl=100000100000000000000000000000000000000000000|NomEltMdl=EltDgmScnDgm
+DeclPrpCls|DscEltMdl=RoseObject Element Diagram ScenarioDiagram CollaborationDiagram|CodeEltMdl=100000110000000000000000000000000000000000000|NomEltMdl=EltDgmScnDgmClbDgm
+DeclPrpCls|DscEltMdl=RoseObject Element Diagram ScenarioDiagram SequenceDiagram|CodeEltMdl=100000101000000000000000000000000000000000000|NomEltMdl=EltDgmScnDgmSeqDgm
+DeclPrpCls|DscEltMdl=RoseObject Element Diagram StateDiagram|CodeEltMdl=100000000100000000000000000000000000000000000|NomEltMdl=EltDgmSttDgm
+DeclPrpCls|DscEltMdl=RoseObject Element Diagram StateDiagram ActivityDiagram|CodeEltMdl=100000000110000000000000000000000000000000000|NomEltMdl=EltDgmSttDgmActDgm
+DeclPrpCls|DscEltMdl=RoseObject Element Diagram StateDiagram StateDiagram|CodeEltMdl=100000000101000000000000000000000000000000000|NomEltMdl=EltDgmSttDgmSttDgm
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem Association|CodeEltMdl=000000000000100000000000000000000000000000000|NomEltMdl=EltRseItmAss
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem Attribute|CodeEltMdl=000000000000010000000000000000000000000000000|NomEltMdl=EltRseItmAtb
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem Class|CodeEltMdl=000000000000001000000000000000000000000000000|NomEltMdl=EltRseItmCls
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem ControllableUnit|CodeEltMdl=000000000000000100000000000000000000000000000|NomEltMdl=EltRseItmCtlUnt
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem ControllableUnit DefaultModelProperties|CodeEltMdl=000000000000000110000000000000000000000000000|NomEltMdl=EltRseItmCtlUntDftMdlPrp
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem ControllableUnit DeploymentUnit|CodeEltMdl=000000000000000101000000000000000000000000000|NomEltMdl=EltRseItmCtlUntDplUnt
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem ControllableUnit Package|CodeEltMdl=000000000000000100100000000000000000000000000|NomEltMdl=EltRseItmCtlUntPkg
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem ControllableUnit Package Category|CodeEltMdl=000000000000000100110000000000000000000000000|NomEltMdl=EltRseItmCtlUntPkgCtg
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem ControllableUnit Package Model|CodeEltMdl=000000000000000100101000000000000000000000000|NomEltMdl=EltRseItmCtlUntPkgMdl
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem ControllableUnit Package SubSystem|CodeEltMdl=000000000000000100100100000000000000000000000|NomEltMdl=EltRseItmCtlUntPkgSubSys
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem Link|CodeEltMdl=000000000000000000000010000000000000000000000|NomEltMdl=EltRseItmLnk
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem Message|CodeEltMdl=000000000000000000000001000000000000000000000|NomEltMdl=EltRseItmMsg
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem Module|CodeEltMdl=000000000000000000000000100000000000000000000|NomEltMdl=EltRseItmMod
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem ObjectInstance|CodeEltMdl=000000000000000000000000010000000000000000000|NomEltMdl=EltRseItmObjIns
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem Operation|CodeEltMdl=000000000000000000000000001000000000000000000|NomEltMdl=EltRseItmOpr
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem Parameter|CodeEltMdl=000000000000000000000000000100000000000000000|NomEltMdl=EltRseItmPrm
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem Relation|CodeEltMdl=000000000000000000000000000010000000000000000|NomEltMdl=EltRseItmRel
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem Relation CategoryDependency|CodeEltMdl=000000000000000000000000000011000000000000000|NomEltMdl=EltRseItmRelCtgDep
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem Relation ClassRelation|CodeEltMdl=000000000000000000000000000010100000000000000|NomEltMdl=EltRseItmRelClsRel
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem Relation ClassRelation ClassDependency|CodeEltMdl=000000000000000000000000000010110000000000000|NomEltMdl=EltRseItmRelClsRelClsDep
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem Relation ClassRelation HasRelationShip|CodeEltMdl=000000000000000000000000000010101000000000000|NomEltMdl=EltRseItmRelClsRelHasRls
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem Relation ClassRelation InheritRelation|CodeEltMdl=000000000000000000000000000010100100000000000|NomEltMdl=EltRseItmRelClsRelInhRel
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem Relation ClassRelation InstantiateRelation|CodeEltMdl=000000000000000000000000000010100010000000000|NomEltMdl=EltRseItmRelClsRelIntRel
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem Relation ConnectionRelation|CodeEltMdl=000000000000000000000000000010000001000000000|NomEltMdl=EltRseItmRelConRel
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem Relation DependencyRelation|CodeEltMdl=000000000000000000000000000010000000100000000|NomEltMdl=EltRseItmRelDepRel
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem Relation DependencyRelation ObjectFlow|CodeEltMdl=000000000000000000000000000010000000110000000|NomEltMdl=EltRseItmRelDepRelObjFlw
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem Relation ModuleVisibilityRelationShip|CodeEltMdl=000000000000000000000000000010000000001000000|NomEltMdl=EltRseItmRelModVsbRls
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem Relation RealizeRelation|CodeEltMdl=000000000000000000000000000010000000000100000|NomEltMdl=EltRseItmRelRlzRel
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem Relation Role|CodeEltMdl=000000000000000000000000000010000000000010000|NomEltMdl=EltRseItmRelRol
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem Relation Transition|CodeEltMdl=000000000000000000000000000010000000000001000|NomEltMdl=EltRseItmRelTrn
+DeclPrpCls|DscEltMdl=RoseObject Element RoseItem UseCase|CodeEltMdl=000000000000000000000000000000000000000000100|NomEltMdl=EltRseItmUseCas
+DeclPrpCls|DscEltMdl=RoseObject Element StateMachine|CodeEltMdl=000000000000000000000000000000000000000000010|NomEltMdl=EltSttMch
+DeclPrpCls|DscEltMdl=RoseObject External Document|CodeEltMdl=000000000000000000000000000000000000000000001|NomEltMdl=ExtDoc
+
+# -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+# Declaration des lignes de récupération de l'etat des filtres pour ToString
+# -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+# Template  ==> MajValeursToString
+# Variables ==> DscEltMdl
+#               NomEltMdl
+# -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+
+SeparBlocs|NomTpl=MajValeursToString
+
+MajValeursToString|DscEltMdl=RoseObject Element Diagram|NomEltMdl=EltDgm
+MajValeursToString|DscEltMdl=RoseObject Element Diagram ClassDiagram|NomEltMdl=EltDgmClsDgm
+MajValeursToString|DscEltMdl=RoseObject Element Diagram ClassDiagram ClassDiagram|NomEltMdl=EltDgmClsDgmClsDgm
+MajValeursToString|DscEltMdl=RoseObject Element Diagram ClassDiagram UseCaseDiagram|NomEltMdl=EltDgmClsDgmUseCasDgm
+MajValeursToString|DscEltMdl=RoseObject Element Diagram DeploymentDiagram|NomEltMdl=EltDgmDplDgm
+MajValeursToString|DscEltMdl=RoseObject Element Diagram ModuleDiagram|NomEltMdl=EltDgmModDgm
+MajValeursToString|DscEltMdl=RoseObject Element Diagram ScenarioDiagram|NomEltMdl=EltDgmScnDgm
+MajValeursToString|DscEltMdl=RoseObject Element Diagram ScenarioDiagram CollaborationDiagram|NomEltMdl=EltDgmScnDgmClbDgm
+MajValeursToString|DscEltMdl=RoseObject Element Diagram ScenarioDiagram SequenceDiagram|NomEltMdl=EltDgmScnDgmSeqDgm
+MajValeursToString|DscEltMdl=RoseObject Element Diagram StateDiagram|NomEltMdl=EltDgmSttDgm
+MajValeursToString|DscEltMdl=RoseObject Element Diagram StateDiagram ActivityDiagram|NomEltMdl=EltDgmSttDgmActDgm
+MajValeursToString|DscEltMdl=RoseObject Element Diagram StateDiagram StateDiagram|NomEltMdl=EltDgmSttDgmSttDgm
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem Association|NomEltMdl=EltRseItmAss
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem Attribute|NomEltMdl=EltRseItmAtb
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem Class|NomEltMdl=EltRseItmCls
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem ControllableUnit|NomEltMdl=EltRseItmCtlUnt
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem ControllableUnit DefaultModelProperties|NomEltMdl=EltRseItmCtlUntDftMdlPrp
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem ControllableUnit DeploymentUnit|NomEltMdl=EltRseItmCtlUntDplUnt
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem ControllableUnit Package|NomEltMdl=EltRseItmCtlUntPkg
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem ControllableUnit Package Category|NomEltMdl=EltRseItmCtlUntPkgCtg
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem ControllableUnit Package Model|NomEltMdl=EltRseItmCtlUntPkgMdl
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem ControllableUnit Package SubSystem|NomEltMdl=EltRseItmCtlUntPkgSubSys
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem Link|NomEltMdl=EltRseItmLnk
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem Message|NomEltMdl=EltRseItmMsg
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem Module|NomEltMdl=EltRseItmMod
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem ObjectInstance|NomEltMdl=EltRseItmObjIns
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem Operation|NomEltMdl=EltRseItmOpr
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem Parameter|NomEltMdl=EltRseItmPrm
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem Relation|NomEltMdl=EltRseItmRel
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem Relation CategoryDependency|NomEltMdl=EltRseItmRelCtgDep
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem Relation ClassRelation|NomEltMdl=EltRseItmRelClsRel
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem Relation ClassRelation ClassDependency|NomEltMdl=EltRseItmRelClsRelClsDep
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem Relation ClassRelation HasRelationShip|NomEltMdl=EltRseItmRelClsRelHasRls
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem Relation ClassRelation InheritRelation|NomEltMdl=EltRseItmRelClsRelInhRel
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem Relation ClassRelation InstantiateRelation|NomEltMdl=EltRseItmRelClsRelIntRel
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem Relation ConnectionRelation|NomEltMdl=EltRseItmRelConRel
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem Relation DependencyRelation|NomEltMdl=EltRseItmRelDepRel
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem Relation DependencyRelation ObjectFlow|NomEltMdl=EltRseItmRelDepRelObjFlw
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem Relation ModuleVisibilityRelationShip|NomEltMdl=EltRseItmRelModVsbRls
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem Relation RealizeRelation|NomEltMdl=EltRseItmRelRlzRel
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem Relation Role|NomEltMdl=EltRseItmRelRol
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem Relation Transition|NomEltMdl=EltRseItmRelTrn
+MajValeursToString|DscEltMdl=RoseObject Element RoseItem UseCase|NomEltMdl=EltRseItmUseCas
+MajValeursToString|DscEltMdl=RoseObject Element StateMachine|NomEltMdl=EltSttMch
+MajValeursToString|DscEltMdl=RoseObject External Document|NomEltMdl=ExtDoc

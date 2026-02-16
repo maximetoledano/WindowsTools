@@ -1,0 +1,6 @@
+
+# Arret du serveur de pages JSP (Tomcat)
+|application|F:\Apache Group\Jakarta-Tomcat-5.0.16\bin\shutdown.bat|
+
+# Arret du site web local (Apache 2)
+|stop|Apache2|

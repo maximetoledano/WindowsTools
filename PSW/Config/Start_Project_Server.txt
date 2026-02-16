@@ -1,0 +1,13 @@
+
+# Demarrage du site web local (IIS 5)
+|start|W3SVC|
+
+# Demarrage de la base de donnees (SQL Server 2000)
+|start|MSSQLSERVER|
+|start|MSSQLServerOLAPService|
+
+# Demarrage du serveur (Project Server 2002)
+|start|PjSchSvc|
+|start|PjSessionMgr|
+|start|PjTraceSvc|
+|start|PjViewNotify|

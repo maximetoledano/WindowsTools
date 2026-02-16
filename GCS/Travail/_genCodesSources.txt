@@ -1,0 +1,1415 @@
+
+' -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+' ==> DeclVarBool  
+' -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+
+
+' Filtrage des RoseObject Element Diagram
+' RoseObject Element Diagram ==> "100000000000000000000000000000000000000000000"
+Private lBln_FiltreEltDgm As Boolean
+
+' Filtrage des RoseObject Element Diagram ClassDiagram
+' RoseObject Element Diagram ClassDiagram ==> "110000000000000000000000000000000000000000000"
+Private lBln_FiltreEltDgmClsDgm As Boolean
+
+' Filtrage des RoseObject Element Diagram ClassDiagram ClassDiagram
+' RoseObject Element Diagram ClassDiagram ClassDiagram ==> "111000000000000000000000000000000000000000000"
+Private lBln_FiltreEltDgmClsDgmClsDgm As Boolean
+
+' Filtrage des RoseObject Element Diagram ClassDiagram UseCaseDiagram
+' RoseObject Element Diagram ClassDiagram UseCaseDiagram ==> "110100000000000000000000000000000000000000000"
+Private lBln_FiltreEltDgmClsDgmUseCasDgm As Boolean
+
+' Filtrage des RoseObject Element Diagram DeploymentDiagram
+' RoseObject Element Diagram DeploymentDiagram ==> "100010000000000000000000000000000000000000000"
+Private lBln_FiltreEltDgmDplDgm As Boolean
+
+' Filtrage des RoseObject Element Diagram ModuleDiagram
+' RoseObject Element Diagram ModuleDiagram ==> "100001000000000000000000000000000000000000000"
+Private lBln_FiltreEltDgmModDgm As Boolean
+
+' Filtrage des RoseObject Element Diagram ScenarioDiagram
+' RoseObject Element Diagram ScenarioDiagram ==> "100000100000000000000000000000000000000000000"
+Private lBln_FiltreEltDgmScnDgm As Boolean
+
+' Filtrage des RoseObject Element Diagram ScenarioDiagram CollaborationDiagram
+' RoseObject Element Diagram ScenarioDiagram CollaborationDiagram ==> "100000110000000000000000000000000000000000000"
+Private lBln_FiltreEltDgmScnDgmClbDgm As Boolean
+
+' Filtrage des RoseObject Element Diagram ScenarioDiagram SequenceDiagram
+' RoseObject Element Diagram ScenarioDiagram SequenceDiagram ==> "100000101000000000000000000000000000000000000"
+Private lBln_FiltreEltDgmScnDgmSeqDgm As Boolean
+
+' Filtrage des RoseObject Element Diagram StateDiagram
+' RoseObject Element Diagram StateDiagram ==> "100000000100000000000000000000000000000000000"
+Private lBln_FiltreEltDgmSttDgm As Boolean
+
+' Filtrage des RoseObject Element Diagram StateDiagram ActivityDiagram
+' RoseObject Element Diagram StateDiagram ActivityDiagram ==> "100000000110000000000000000000000000000000000"
+Private lBln_FiltreEltDgmSttDgmActDgm As Boolean
+
+' Filtrage des RoseObject Element Diagram StateDiagram StateDiagram
+' RoseObject Element Diagram StateDiagram StateDiagram ==> "100000000101000000000000000000000000000000000"
+Private lBln_FiltreEltDgmSttDgmSttDgm As Boolean
+
+' Filtrage des RoseObject Element RoseItem Association
+' RoseObject Element RoseItem Association ==> "000000000000100000000000000000000000000000000"
+Private lBln_FiltreEltRseItmAss As Boolean
+
+' Filtrage des RoseObject Element RoseItem Attribute
+' RoseObject Element RoseItem Attribute ==> "000000000000010000000000000000000000000000000"
+Private lBln_FiltreEltRseItmAtb As Boolean
+
+' Filtrage des RoseObject Element RoseItem Class
+' RoseObject Element RoseItem Class ==> "000000000000001000000000000000000000000000000"
+Private lBln_FiltreEltRseItmCls As Boolean
+
+' Filtrage des RoseObject Element RoseItem ControllableUnit
+' RoseObject Element RoseItem ControllableUnit ==> "000000000000000100000000000000000000000000000"
+Private lBln_FiltreEltRseItmCtlUnt As Boolean
+
+' Filtrage des RoseObject Element RoseItem ControllableUnit DefaultModelProperties
+' RoseObject Element RoseItem ControllableUnit DefaultModelProperties ==> "000000000000000110000000000000000000000000000"
+Private lBln_FiltreEltRseItmCtlUntDftMdlPrp As Boolean
+
+' Filtrage des RoseObject Element RoseItem ControllableUnit DeploymentUnit
+' RoseObject Element RoseItem ControllableUnit DeploymentUnit ==> "000000000000000101000000000000000000000000000"
+Private lBln_FiltreEltRseItmCtlUntDplUnt As Boolean
+
+' Filtrage des RoseObject Element RoseItem ControllableUnit Package
+' RoseObject Element RoseItem ControllableUnit Package ==> "000000000000000100100000000000000000000000000"
+Private lBln_FiltreEltRseItmCtlUntPkg As Boolean
+
+' Filtrage des RoseObject Element RoseItem ControllableUnit Package Category
+' RoseObject Element RoseItem ControllableUnit Package Category ==> "000000000000000100110000000000000000000000000"
+Private lBln_FiltreEltRseItmCtlUntPkgCtg As Boolean
+
+' Filtrage des RoseObject Element RoseItem ControllableUnit Package Model
+' RoseObject Element RoseItem ControllableUnit Package Model ==> "000000000000000100101000000000000000000000000"
+Private lBln_FiltreEltRseItmCtlUntPkgMdl As Boolean
+
+' Filtrage des RoseObject Element RoseItem ControllableUnit Package SubSystem
+' RoseObject Element RoseItem ControllableUnit Package SubSystem ==> "000000000000000100100100000000000000000000000"
+Private lBln_FiltreEltRseItmCtlUntPkgSubSys As Boolean
+
+' Filtrage des RoseObject Element RoseItem Link
+' RoseObject Element RoseItem Link ==> "000000000000000000000010000000000000000000000"
+Private lBln_FiltreEltRseItmLnk As Boolean
+
+' Filtrage des RoseObject Element RoseItem Message
+' RoseObject Element RoseItem Message ==> "000000000000000000000001000000000000000000000"
+Private lBln_FiltreEltRseItmMsg As Boolean
+
+' Filtrage des RoseObject Element RoseItem Module
+' RoseObject Element RoseItem Module ==> "000000000000000000000000100000000000000000000"
+Private lBln_FiltreEltRseItmMod As Boolean
+
+' Filtrage des RoseObject Element RoseItem ObjectInstance
+' RoseObject Element RoseItem ObjectInstance ==> "000000000000000000000000010000000000000000000"
+Private lBln_FiltreEltRseItmObjIns As Boolean
+
+' Filtrage des RoseObject Element RoseItem Operation
+' RoseObject Element RoseItem Operation ==> "000000000000000000000000001000000000000000000"
+Private lBln_FiltreEltRseItmOpr As Boolean
+
+' Filtrage des RoseObject Element RoseItem Parameter
+' RoseObject Element RoseItem Parameter ==> "000000000000000000000000000100000000000000000"
+Private lBln_FiltreEltRseItmPrm As Boolean
+
+' Filtrage des RoseObject Element RoseItem Relation
+' RoseObject Element RoseItem Relation ==> "000000000000000000000000000010000000000000000"
+Private lBln_FiltreEltRseItmRel As Boolean
+
+' Filtrage des RoseObject Element RoseItem Relation CategoryDependency
+' RoseObject Element RoseItem Relation CategoryDependency ==> "000000000000000000000000000011000000000000000"
+Private lBln_FiltreEltRseItmRelCtgDep As Boolean
+
+' Filtrage des RoseObject Element RoseItem Relation ClassRelation
+' RoseObject Element RoseItem Relation ClassRelation ==> "000000000000000000000000000010100000000000000"
+Private lBln_FiltreEltRseItmRelClsRel As Boolean
+
+' Filtrage des RoseObject Element RoseItem Relation ClassRelation ClassDependency
+' RoseObject Element RoseItem Relation ClassRelation ClassDependency ==> "000000000000000000000000000010110000000000000"
+Private lBln_FiltreEltRseItmRelClsRelClsDep As Boolean
+
+' Filtrage des RoseObject Element RoseItem Relation ClassRelation HasRelationShip
+' RoseObject Element RoseItem Relation ClassRelation HasRelationShip ==> "000000000000000000000000000010101000000000000"
+Private lBln_FiltreEltRseItmRelClsRelHasRls As Boolean
+
+' Filtrage des RoseObject Element RoseItem Relation ClassRelation InheritRelation
+' RoseObject Element RoseItem Relation ClassRelation InheritRelation ==> "000000000000000000000000000010100100000000000"
+Private lBln_FiltreEltRseItmRelClsRelInhRel As Boolean
+
+' Filtrage des RoseObject Element RoseItem Relation ClassRelation InstantiateRelation
+' RoseObject Element RoseItem Relation ClassRelation InstantiateRelation ==> "000000000000000000000000000010100010000000000"
+Private lBln_FiltreEltRseItmRelClsRelIntRel As Boolean
+
+' Filtrage des RoseObject Element RoseItem Relation ConnectionRelation
+' RoseObject Element RoseItem Relation ConnectionRelation ==> "000000000000000000000000000010000001000000000"
+Private lBln_FiltreEltRseItmRelConRel As Boolean
+
+' Filtrage des RoseObject Element RoseItem Relation DependencyRelation
+' RoseObject Element RoseItem Relation DependencyRelation ==> "000000000000000000000000000010000000100000000"
+Private lBln_FiltreEltRseItmRelDepRel As Boolean
+
+' Filtrage des RoseObject Element RoseItem Relation DependencyRelation ObjectFlow
+' RoseObject Element RoseItem Relation DependencyRelation ObjectFlow ==> "000000000000000000000000000010000000110000000"
+Private lBln_FiltreEltRseItmRelDepRelObjFlw As Boolean
+
+' Filtrage des RoseObject Element RoseItem Relation ModuleVisibilityRelationShip
+' RoseObject Element RoseItem Relation ModuleVisibilityRelationShip ==> "000000000000000000000000000010000000001000000"
+Private lBln_FiltreEltRseItmRelModVsbRls As Boolean
+
+' Filtrage des RoseObject Element RoseItem Relation RealizeRelation
+' RoseObject Element RoseItem Relation RealizeRelation ==> "000000000000000000000000000010000000000100000"
+Private lBln_FiltreEltRseItmRelRlzRel As Boolean
+
+' Filtrage des RoseObject Element RoseItem Relation Role
+' RoseObject Element RoseItem Relation Role ==> "000000000000000000000000000010000000000010000"
+Private lBln_FiltreEltRseItmRelRol As Boolean
+
+' Filtrage des RoseObject Element RoseItem Relation Transition
+' RoseObject Element RoseItem Relation Transition ==> "000000000000000000000000000010000000000001000"
+Private lBln_FiltreEltRseItmRelTrn As Boolean
+
+' Filtrage des RoseObject Element RoseItem UseCase
+' RoseObject Element RoseItem UseCase ==> "000000000000000000000000000000000000000000100"
+Private lBln_FiltreEltRseItmUseCas As Boolean
+
+' Filtrage des RoseObject Element StateMachine
+' RoseObject Element StateMachine ==> "000000000000000000000000000000000000000000010"
+Private lBln_FiltreEltSttMch As Boolean
+
+' Filtrage des RoseObject External Document
+' RoseObject External Document ==> "000000000000000000000000000000000000000000001"
+Private lBln_FiltreExtDoc As Boolean
+
+' -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+' ==> DeclInitVar  
+' -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+
+    mgBln_FiltreEltDgm = False
+    mgBln_FiltreEltDgmClsDgm = False
+    mgBln_FiltreEltDgmClsDgmClsDgm = False
+    mgBln_FiltreEltDgmClsDgmUseCasDgm = False
+    mgBln_FiltreEltDgmDplDgm = False
+    mgBln_FiltreEltDgmModDgm = False
+    mgBln_FiltreEltDgmScnDgm = False
+    mgBln_FiltreEltDgmScnDgmClbDgm = False
+    mgBln_FiltreEltDgmScnDgmSeqDgm = False
+    mgBln_FiltreEltDgmSttDgm = False
+    mgBln_FiltreEltDgmSttDgmActDgm = False
+    mgBln_FiltreEltDgmSttDgmSttDgm = False
+    mgBln_FiltreEltRseItmAss = False
+    mgBln_FiltreEltRseItmAtb = False
+    mgBln_FiltreEltRseItmCls = False
+    mgBln_FiltreEltRseItmCtlUnt = False
+    mgBln_FiltreEltRseItmCtlUntDftMdlPrp = False
+    mgBln_FiltreEltRseItmCtlUntDplUnt = False
+    mgBln_FiltreEltRseItmCtlUntPkg = False
+    mgBln_FiltreEltRseItmCtlUntPkgCtg = False
+    mgBln_FiltreEltRseItmCtlUntPkgMdl = False
+    mgBln_FiltreEltRseItmCtlUntPkgSubSys = False
+    mgBln_FiltreEltRseItmLnk = False
+    mgBln_FiltreEltRseItmMsg = False
+    mgBln_FiltreEltRseItmMod = False
+    mgBln_FiltreEltRseItmObjIns = False
+    mgBln_FiltreEltRseItmOpr = False
+    mgBln_FiltreEltRseItmPrm = False
+    mgBln_FiltreEltRseItmRel = False
+    mgBln_FiltreEltRseItmRelCtgDep = False
+    mgBln_FiltreEltRseItmRelClsRel = False
+    mgBln_FiltreEltRseItmRelClsRelClsDep = False
+    mgBln_FiltreEltRseItmRelClsRelHasRls = False
+    mgBln_FiltreEltRseItmRelClsRelInhRel = False
+    mgBln_FiltreEltRseItmRelClsRelIntRel = False
+    mgBln_FiltreEltRseItmRelConRel = False
+    mgBln_FiltreEltRseItmRelDepRel = False
+    mgBln_FiltreEltRseItmRelDepRelObjFlw = False
+    mgBln_FiltreEltRseItmRelModVsbRls = False
+    mgBln_FiltreEltRseItmRelRlzRel = False
+    mgBln_FiltreEltRseItmRelRol = False
+    mgBln_FiltreEltRseItmRelTrn = False
+    mgBln_FiltreEltRseItmUseCas = False
+    mgBln_FiltreEltSttMch = False
+    mgBln_FiltreExtDoc = False
+
+' -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+' ==> DeclPrpCls  
+' -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltDgm [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element Diagram"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltDgm() As Boolean
+' RoseObject Element Diagram ==> "100000000000000000000000000000000000000000000"
+
+    mgBln_FiltreEltDgm = lBln_FiltreEltDgm
+End Property
+
+Public Property Let mgBln_FiltreEltDgm(ByVal pBln_Etat As Boolean)
+' RoseObject Element Diagram ==> "100000000000000000000000000000000000000000000"
+
+    lBln_FiltreEltDgm = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltDgmClsDgm [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element Diagram ClassDiagram"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltDgmClsDgm() As Boolean
+' RoseObject Element Diagram ClassDiagram ==> "110000000000000000000000000000000000000000000"
+
+    mgBln_FiltreEltDgmClsDgm = lBln_FiltreEltDgmClsDgm
+End Property
+
+Public Property Let mgBln_FiltreEltDgmClsDgm(ByVal pBln_Etat As Boolean)
+' RoseObject Element Diagram ClassDiagram ==> "110000000000000000000000000000000000000000000"
+
+    lBln_FiltreEltDgmClsDgm = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltDgmClsDgmClsDgm [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element Diagram ClassDiagram ClassDiagram"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltDgmClsDgmClsDgm() As Boolean
+' RoseObject Element Diagram ClassDiagram ClassDiagram ==> "111000000000000000000000000000000000000000000"
+
+    mgBln_FiltreEltDgmClsDgmClsDgm = lBln_FiltreEltDgmClsDgmClsDgm
+End Property
+
+Public Property Let mgBln_FiltreEltDgmClsDgmClsDgm(ByVal pBln_Etat As Boolean)
+' RoseObject Element Diagram ClassDiagram ClassDiagram ==> "111000000000000000000000000000000000000000000"
+
+    lBln_FiltreEltDgmClsDgmClsDgm = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltDgmClsDgmUseCasDgm [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element Diagram ClassDiagram UseCaseDiagram"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltDgmClsDgmUseCasDgm() As Boolean
+' RoseObject Element Diagram ClassDiagram UseCaseDiagram ==> "110100000000000000000000000000000000000000000"
+
+    mgBln_FiltreEltDgmClsDgmUseCasDgm = lBln_FiltreEltDgmClsDgmUseCasDgm
+End Property
+
+Public Property Let mgBln_FiltreEltDgmClsDgmUseCasDgm(ByVal pBln_Etat As Boolean)
+' RoseObject Element Diagram ClassDiagram UseCaseDiagram ==> "110100000000000000000000000000000000000000000"
+
+    lBln_FiltreEltDgmClsDgmUseCasDgm = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltDgmDplDgm [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element Diagram DeploymentDiagram"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltDgmDplDgm() As Boolean
+' RoseObject Element Diagram DeploymentDiagram ==> "100010000000000000000000000000000000000000000"
+
+    mgBln_FiltreEltDgmDplDgm = lBln_FiltreEltDgmDplDgm
+End Property
+
+Public Property Let mgBln_FiltreEltDgmDplDgm(ByVal pBln_Etat As Boolean)
+' RoseObject Element Diagram DeploymentDiagram ==> "100010000000000000000000000000000000000000000"
+
+    lBln_FiltreEltDgmDplDgm = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltDgmModDgm [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element Diagram ModuleDiagram"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltDgmModDgm() As Boolean
+' RoseObject Element Diagram ModuleDiagram ==> "100001000000000000000000000000000000000000000"
+
+    mgBln_FiltreEltDgmModDgm = lBln_FiltreEltDgmModDgm
+End Property
+
+Public Property Let mgBln_FiltreEltDgmModDgm(ByVal pBln_Etat As Boolean)
+' RoseObject Element Diagram ModuleDiagram ==> "100001000000000000000000000000000000000000000"
+
+    lBln_FiltreEltDgmModDgm = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltDgmScnDgm [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element Diagram ScenarioDiagram"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltDgmScnDgm() As Boolean
+' RoseObject Element Diagram ScenarioDiagram ==> "100000100000000000000000000000000000000000000"
+
+    mgBln_FiltreEltDgmScnDgm = lBln_FiltreEltDgmScnDgm
+End Property
+
+Public Property Let mgBln_FiltreEltDgmScnDgm(ByVal pBln_Etat As Boolean)
+' RoseObject Element Diagram ScenarioDiagram ==> "100000100000000000000000000000000000000000000"
+
+    lBln_FiltreEltDgmScnDgm = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltDgmScnDgmClbDgm [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element Diagram ScenarioDiagram CollaborationDiagram"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltDgmScnDgmClbDgm() As Boolean
+' RoseObject Element Diagram ScenarioDiagram CollaborationDiagram ==> "100000110000000000000000000000000000000000000"
+
+    mgBln_FiltreEltDgmScnDgmClbDgm = lBln_FiltreEltDgmScnDgmClbDgm
+End Property
+
+Public Property Let mgBln_FiltreEltDgmScnDgmClbDgm(ByVal pBln_Etat As Boolean)
+' RoseObject Element Diagram ScenarioDiagram CollaborationDiagram ==> "100000110000000000000000000000000000000000000"
+
+    lBln_FiltreEltDgmScnDgmClbDgm = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltDgmScnDgmSeqDgm [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element Diagram ScenarioDiagram SequenceDiagram"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltDgmScnDgmSeqDgm() As Boolean
+' RoseObject Element Diagram ScenarioDiagram SequenceDiagram ==> "100000101000000000000000000000000000000000000"
+
+    mgBln_FiltreEltDgmScnDgmSeqDgm = lBln_FiltreEltDgmScnDgmSeqDgm
+End Property
+
+Public Property Let mgBln_FiltreEltDgmScnDgmSeqDgm(ByVal pBln_Etat As Boolean)
+' RoseObject Element Diagram ScenarioDiagram SequenceDiagram ==> "100000101000000000000000000000000000000000000"
+
+    lBln_FiltreEltDgmScnDgmSeqDgm = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltDgmSttDgm [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element Diagram StateDiagram"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltDgmSttDgm() As Boolean
+' RoseObject Element Diagram StateDiagram ==> "100000000100000000000000000000000000000000000"
+
+    mgBln_FiltreEltDgmSttDgm = lBln_FiltreEltDgmSttDgm
+End Property
+
+Public Property Let mgBln_FiltreEltDgmSttDgm(ByVal pBln_Etat As Boolean)
+' RoseObject Element Diagram StateDiagram ==> "100000000100000000000000000000000000000000000"
+
+    lBln_FiltreEltDgmSttDgm = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltDgmSttDgmActDgm [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element Diagram StateDiagram ActivityDiagram"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltDgmSttDgmActDgm() As Boolean
+' RoseObject Element Diagram StateDiagram ActivityDiagram ==> "100000000110000000000000000000000000000000000"
+
+    mgBln_FiltreEltDgmSttDgmActDgm = lBln_FiltreEltDgmSttDgmActDgm
+End Property
+
+Public Property Let mgBln_FiltreEltDgmSttDgmActDgm(ByVal pBln_Etat As Boolean)
+' RoseObject Element Diagram StateDiagram ActivityDiagram ==> "100000000110000000000000000000000000000000000"
+
+    lBln_FiltreEltDgmSttDgmActDgm = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltDgmSttDgmSttDgm [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element Diagram StateDiagram StateDiagram"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltDgmSttDgmSttDgm() As Boolean
+' RoseObject Element Diagram StateDiagram StateDiagram ==> "100000000101000000000000000000000000000000000"
+
+    mgBln_FiltreEltDgmSttDgmSttDgm = lBln_FiltreEltDgmSttDgmSttDgm
+End Property
+
+Public Property Let mgBln_FiltreEltDgmSttDgmSttDgm(ByVal pBln_Etat As Boolean)
+' RoseObject Element Diagram StateDiagram StateDiagram ==> "100000000101000000000000000000000000000000000"
+
+    lBln_FiltreEltDgmSttDgmSttDgm = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmAss [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem Association"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmAss() As Boolean
+' RoseObject Element RoseItem Association ==> "000000000000100000000000000000000000000000000"
+
+    mgBln_FiltreEltRseItmAss = lBln_FiltreEltRseItmAss
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmAss(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem Association ==> "000000000000100000000000000000000000000000000"
+
+    lBln_FiltreEltRseItmAss = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmAtb [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem Attribute"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmAtb() As Boolean
+' RoseObject Element RoseItem Attribute ==> "000000000000010000000000000000000000000000000"
+
+    mgBln_FiltreEltRseItmAtb = lBln_FiltreEltRseItmAtb
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmAtb(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem Attribute ==> "000000000000010000000000000000000000000000000"
+
+    lBln_FiltreEltRseItmAtb = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmCls [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem Class"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmCls() As Boolean
+' RoseObject Element RoseItem Class ==> "000000000000001000000000000000000000000000000"
+
+    mgBln_FiltreEltRseItmCls = lBln_FiltreEltRseItmCls
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmCls(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem Class ==> "000000000000001000000000000000000000000000000"
+
+    lBln_FiltreEltRseItmCls = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmCtlUnt [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem ControllableUnit"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmCtlUnt() As Boolean
+' RoseObject Element RoseItem ControllableUnit ==> "000000000000000100000000000000000000000000000"
+
+    mgBln_FiltreEltRseItmCtlUnt = lBln_FiltreEltRseItmCtlUnt
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmCtlUnt(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem ControllableUnit ==> "000000000000000100000000000000000000000000000"
+
+    lBln_FiltreEltRseItmCtlUnt = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmCtlUntDftMdlPrp [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem ControllableUnit DefaultModelProperties"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmCtlUntDftMdlPrp() As Boolean
+' RoseObject Element RoseItem ControllableUnit DefaultModelProperties ==> "000000000000000110000000000000000000000000000"
+
+    mgBln_FiltreEltRseItmCtlUntDftMdlPrp = lBln_FiltreEltRseItmCtlUntDftMdlPrp
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmCtlUntDftMdlPrp(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem ControllableUnit DefaultModelProperties ==> "000000000000000110000000000000000000000000000"
+
+    lBln_FiltreEltRseItmCtlUntDftMdlPrp = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmCtlUntDplUnt [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem ControllableUnit DeploymentUnit"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmCtlUntDplUnt() As Boolean
+' RoseObject Element RoseItem ControllableUnit DeploymentUnit ==> "000000000000000101000000000000000000000000000"
+
+    mgBln_FiltreEltRseItmCtlUntDplUnt = lBln_FiltreEltRseItmCtlUntDplUnt
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmCtlUntDplUnt(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem ControllableUnit DeploymentUnit ==> "000000000000000101000000000000000000000000000"
+
+    lBln_FiltreEltRseItmCtlUntDplUnt = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmCtlUntPkg [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem ControllableUnit Package"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmCtlUntPkg() As Boolean
+' RoseObject Element RoseItem ControllableUnit Package ==> "000000000000000100100000000000000000000000000"
+
+    mgBln_FiltreEltRseItmCtlUntPkg = lBln_FiltreEltRseItmCtlUntPkg
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmCtlUntPkg(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem ControllableUnit Package ==> "000000000000000100100000000000000000000000000"
+
+    lBln_FiltreEltRseItmCtlUntPkg = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmCtlUntPkgCtg [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem ControllableUnit Package Category"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmCtlUntPkgCtg() As Boolean
+' RoseObject Element RoseItem ControllableUnit Package Category ==> "000000000000000100110000000000000000000000000"
+
+    mgBln_FiltreEltRseItmCtlUntPkgCtg = lBln_FiltreEltRseItmCtlUntPkgCtg
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmCtlUntPkgCtg(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem ControllableUnit Package Category ==> "000000000000000100110000000000000000000000000"
+
+    lBln_FiltreEltRseItmCtlUntPkgCtg = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmCtlUntPkgMdl [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem ControllableUnit Package Model"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmCtlUntPkgMdl() As Boolean
+' RoseObject Element RoseItem ControllableUnit Package Model ==> "000000000000000100101000000000000000000000000"
+
+    mgBln_FiltreEltRseItmCtlUntPkgMdl = lBln_FiltreEltRseItmCtlUntPkgMdl
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmCtlUntPkgMdl(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem ControllableUnit Package Model ==> "000000000000000100101000000000000000000000000"
+
+    lBln_FiltreEltRseItmCtlUntPkgMdl = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmCtlUntPkgSubSys [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem ControllableUnit Package SubSystem"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmCtlUntPkgSubSys() As Boolean
+' RoseObject Element RoseItem ControllableUnit Package SubSystem ==> "000000000000000100100100000000000000000000000"
+
+    mgBln_FiltreEltRseItmCtlUntPkgSubSys = lBln_FiltreEltRseItmCtlUntPkgSubSys
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmCtlUntPkgSubSys(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem ControllableUnit Package SubSystem ==> "000000000000000100100100000000000000000000000"
+
+    lBln_FiltreEltRseItmCtlUntPkgSubSys = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmLnk [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem Link"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmLnk() As Boolean
+' RoseObject Element RoseItem Link ==> "000000000000000000000010000000000000000000000"
+
+    mgBln_FiltreEltRseItmLnk = lBln_FiltreEltRseItmLnk
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmLnk(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem Link ==> "000000000000000000000010000000000000000000000"
+
+    lBln_FiltreEltRseItmLnk = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmMsg [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem Message"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmMsg() As Boolean
+' RoseObject Element RoseItem Message ==> "000000000000000000000001000000000000000000000"
+
+    mgBln_FiltreEltRseItmMsg = lBln_FiltreEltRseItmMsg
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmMsg(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem Message ==> "000000000000000000000001000000000000000000000"
+
+    lBln_FiltreEltRseItmMsg = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmMod [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem Module"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmMod() As Boolean
+' RoseObject Element RoseItem Module ==> "000000000000000000000000100000000000000000000"
+
+    mgBln_FiltreEltRseItmMod = lBln_FiltreEltRseItmMod
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmMod(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem Module ==> "000000000000000000000000100000000000000000000"
+
+    lBln_FiltreEltRseItmMod = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmObjIns [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem ObjectInstance"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmObjIns() As Boolean
+' RoseObject Element RoseItem ObjectInstance ==> "000000000000000000000000010000000000000000000"
+
+    mgBln_FiltreEltRseItmObjIns = lBln_FiltreEltRseItmObjIns
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmObjIns(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem ObjectInstance ==> "000000000000000000000000010000000000000000000"
+
+    lBln_FiltreEltRseItmObjIns = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmOpr [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem Operation"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmOpr() As Boolean
+' RoseObject Element RoseItem Operation ==> "000000000000000000000000001000000000000000000"
+
+    mgBln_FiltreEltRseItmOpr = lBln_FiltreEltRseItmOpr
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmOpr(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem Operation ==> "000000000000000000000000001000000000000000000"
+
+    lBln_FiltreEltRseItmOpr = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmPrm [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem Parameter"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmPrm() As Boolean
+' RoseObject Element RoseItem Parameter ==> "000000000000000000000000000100000000000000000"
+
+    mgBln_FiltreEltRseItmPrm = lBln_FiltreEltRseItmPrm
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmPrm(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem Parameter ==> "000000000000000000000000000100000000000000000"
+
+    lBln_FiltreEltRseItmPrm = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmRel [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem Relation"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmRel() As Boolean
+' RoseObject Element RoseItem Relation ==> "000000000000000000000000000010000000000000000"
+
+    mgBln_FiltreEltRseItmRel = lBln_FiltreEltRseItmRel
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmRel(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem Relation ==> "000000000000000000000000000010000000000000000"
+
+    lBln_FiltreEltRseItmRel = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmRelCtgDep [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem Relation CategoryDependency"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmRelCtgDep() As Boolean
+' RoseObject Element RoseItem Relation CategoryDependency ==> "000000000000000000000000000011000000000000000"
+
+    mgBln_FiltreEltRseItmRelCtgDep = lBln_FiltreEltRseItmRelCtgDep
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmRelCtgDep(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem Relation CategoryDependency ==> "000000000000000000000000000011000000000000000"
+
+    lBln_FiltreEltRseItmRelCtgDep = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmRelClsRel [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem Relation ClassRelation"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmRelClsRel() As Boolean
+' RoseObject Element RoseItem Relation ClassRelation ==> "000000000000000000000000000010100000000000000"
+
+    mgBln_FiltreEltRseItmRelClsRel = lBln_FiltreEltRseItmRelClsRel
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmRelClsRel(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem Relation ClassRelation ==> "000000000000000000000000000010100000000000000"
+
+    lBln_FiltreEltRseItmRelClsRel = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmRelClsRelClsDep [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem Relation ClassRelation ClassDependency"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmRelClsRelClsDep() As Boolean
+' RoseObject Element RoseItem Relation ClassRelation ClassDependency ==> "000000000000000000000000000010110000000000000"
+
+    mgBln_FiltreEltRseItmRelClsRelClsDep = lBln_FiltreEltRseItmRelClsRelClsDep
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmRelClsRelClsDep(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem Relation ClassRelation ClassDependency ==> "000000000000000000000000000010110000000000000"
+
+    lBln_FiltreEltRseItmRelClsRelClsDep = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmRelClsRelHasRls [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem Relation ClassRelation HasRelationShip"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmRelClsRelHasRls() As Boolean
+' RoseObject Element RoseItem Relation ClassRelation HasRelationShip ==> "000000000000000000000000000010101000000000000"
+
+    mgBln_FiltreEltRseItmRelClsRelHasRls = lBln_FiltreEltRseItmRelClsRelHasRls
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmRelClsRelHasRls(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem Relation ClassRelation HasRelationShip ==> "000000000000000000000000000010101000000000000"
+
+    lBln_FiltreEltRseItmRelClsRelHasRls = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmRelClsRelInhRel [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem Relation ClassRelation InheritRelation"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmRelClsRelInhRel() As Boolean
+' RoseObject Element RoseItem Relation ClassRelation InheritRelation ==> "000000000000000000000000000010100100000000000"
+
+    mgBln_FiltreEltRseItmRelClsRelInhRel = lBln_FiltreEltRseItmRelClsRelInhRel
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmRelClsRelInhRel(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem Relation ClassRelation InheritRelation ==> "000000000000000000000000000010100100000000000"
+
+    lBln_FiltreEltRseItmRelClsRelInhRel = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmRelClsRelIntRel [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem Relation ClassRelation InstantiateRelation"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmRelClsRelIntRel() As Boolean
+' RoseObject Element RoseItem Relation ClassRelation InstantiateRelation ==> "000000000000000000000000000010100010000000000"
+
+    mgBln_FiltreEltRseItmRelClsRelIntRel = lBln_FiltreEltRseItmRelClsRelIntRel
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmRelClsRelIntRel(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem Relation ClassRelation InstantiateRelation ==> "000000000000000000000000000010100010000000000"
+
+    lBln_FiltreEltRseItmRelClsRelIntRel = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmRelConRel [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem Relation ConnectionRelation"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmRelConRel() As Boolean
+' RoseObject Element RoseItem Relation ConnectionRelation ==> "000000000000000000000000000010000001000000000"
+
+    mgBln_FiltreEltRseItmRelConRel = lBln_FiltreEltRseItmRelConRel
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmRelConRel(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem Relation ConnectionRelation ==> "000000000000000000000000000010000001000000000"
+
+    lBln_FiltreEltRseItmRelConRel = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmRelDepRel [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem Relation DependencyRelation"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmRelDepRel() As Boolean
+' RoseObject Element RoseItem Relation DependencyRelation ==> "000000000000000000000000000010000000100000000"
+
+    mgBln_FiltreEltRseItmRelDepRel = lBln_FiltreEltRseItmRelDepRel
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmRelDepRel(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem Relation DependencyRelation ==> "000000000000000000000000000010000000100000000"
+
+    lBln_FiltreEltRseItmRelDepRel = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmRelDepRelObjFlw [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem Relation DependencyRelation ObjectFlow"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmRelDepRelObjFlw() As Boolean
+' RoseObject Element RoseItem Relation DependencyRelation ObjectFlow ==> "000000000000000000000000000010000000110000000"
+
+    mgBln_FiltreEltRseItmRelDepRelObjFlw = lBln_FiltreEltRseItmRelDepRelObjFlw
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmRelDepRelObjFlw(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem Relation DependencyRelation ObjectFlow ==> "000000000000000000000000000010000000110000000"
+
+    lBln_FiltreEltRseItmRelDepRelObjFlw = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmRelModVsbRls [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem Relation ModuleVisibilityRelationShip"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmRelModVsbRls() As Boolean
+' RoseObject Element RoseItem Relation ModuleVisibilityRelationShip ==> "000000000000000000000000000010000000001000000"
+
+    mgBln_FiltreEltRseItmRelModVsbRls = lBln_FiltreEltRseItmRelModVsbRls
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmRelModVsbRls(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem Relation ModuleVisibilityRelationShip ==> "000000000000000000000000000010000000001000000"
+
+    lBln_FiltreEltRseItmRelModVsbRls = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmRelRlzRel [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem Relation RealizeRelation"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmRelRlzRel() As Boolean
+' RoseObject Element RoseItem Relation RealizeRelation ==> "000000000000000000000000000010000000000100000"
+
+    mgBln_FiltreEltRseItmRelRlzRel = lBln_FiltreEltRseItmRelRlzRel
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmRelRlzRel(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem Relation RealizeRelation ==> "000000000000000000000000000010000000000100000"
+
+    lBln_FiltreEltRseItmRelRlzRel = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmRelRol [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem Relation Role"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmRelRol() As Boolean
+' RoseObject Element RoseItem Relation Role ==> "000000000000000000000000000010000000000010000"
+
+    mgBln_FiltreEltRseItmRelRol = lBln_FiltreEltRseItmRelRol
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmRelRol(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem Relation Role ==> "000000000000000000000000000010000000000010000"
+
+    lBln_FiltreEltRseItmRelRol = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmRelTrn [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem Relation Transition"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmRelTrn() As Boolean
+' RoseObject Element RoseItem Relation Transition ==> "000000000000000000000000000010000000000001000"
+
+    mgBln_FiltreEltRseItmRelTrn = lBln_FiltreEltRseItmRelTrn
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmRelTrn(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem Relation Transition ==> "000000000000000000000000000010000000000001000"
+
+    lBln_FiltreEltRseItmRelTrn = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltRseItmUseCas [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element RoseItem UseCase"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltRseItmUseCas() As Boolean
+' RoseObject Element RoseItem UseCase ==> "000000000000000000000000000000000000000000100"
+
+    mgBln_FiltreEltRseItmUseCas = lBln_FiltreEltRseItmUseCas
+End Property
+
+Public Property Let mgBln_FiltreEltRseItmUseCas(ByVal pBln_Etat As Boolean)
+' RoseObject Element RoseItem UseCase ==> "000000000000000000000000000000000000000000100"
+
+    lBln_FiltreEltRseItmUseCas = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreEltSttMch [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject Element StateMachine"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreEltSttMch() As Boolean
+' RoseObject Element StateMachine ==> "000000000000000000000000000000000000000000010"
+
+    mgBln_FiltreEltSttMch = lBln_FiltreEltSttMch
+End Property
+
+Public Property Let mgBln_FiltreEltSttMch(ByVal pBln_Etat As Boolean)
+' RoseObject Element StateMachine ==> "000000000000000000000000000000000000000000010"
+
+    lBln_FiltreEltSttMch = pBln_Etat
+End Property
+
+'******************************************************************************
+' NOM                  : mgBln_FiltreExtDoc [Propriété]
+' DESCRIPTION          : Filtrage des "RoseObject External Document"
+' PARAMETRES           : Booléen (Let)
+' RETOUR               : Booléen (Get)
+' AUTEUR               : Maxime Toledano
+' DATE DE CREATION     : 20/09/02
+'******************************************************************************
+' DESCRIPTION          :
+' AUTEUR               :
+' DATE DE MODIFICATION :
+'******************************************************************************
+
+Public Property Get mgBln_FiltreExtDoc() As Boolean
+' RoseObject External Document ==> "000000000000000000000000000000000000000000001"
+
+    mgBln_FiltreExtDoc = lBln_FiltreExtDoc
+End Property
+
+Public Property Let mgBln_FiltreExtDoc(ByVal pBln_Etat As Boolean)
+' RoseObject External Document ==> "000000000000000000000000000000000000000000001"
+
+    lBln_FiltreExtDoc = pBln_Etat
+End Property
+
+' -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+' ==> MajValeursToString  
+' -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+
+    If lBln_FiltreEltDgm Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element Diagram" & vbCrLf
+    If lBln_FiltreEltDgmClsDgm Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element Diagram ClassDiagram" & vbCrLf
+    If lBln_FiltreEltDgmClsDgmClsDgm Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element Diagram ClassDiagram ClassDiagram" & vbCrLf
+    If lBln_FiltreEltDgmClsDgmUseCasDgm Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element Diagram ClassDiagram UseCaseDiagram" & vbCrLf
+    If lBln_FiltreEltDgmDplDgm Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element Diagram DeploymentDiagram" & vbCrLf
+    If lBln_FiltreEltDgmModDgm Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element Diagram ModuleDiagram" & vbCrLf
+    If lBln_FiltreEltDgmScnDgm Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element Diagram ScenarioDiagram" & vbCrLf
+    If lBln_FiltreEltDgmScnDgmClbDgm Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element Diagram ScenarioDiagram CollaborationDiagram" & vbCrLf
+    If lBln_FiltreEltDgmScnDgmSeqDgm Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element Diagram ScenarioDiagram SequenceDiagram" & vbCrLf
+    If lBln_FiltreEltDgmSttDgm Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element Diagram StateDiagram" & vbCrLf
+    If lBln_FiltreEltDgmSttDgmActDgm Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element Diagram StateDiagram ActivityDiagram" & vbCrLf
+    If lBln_FiltreEltDgmSttDgmSttDgm Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element Diagram StateDiagram StateDiagram" & vbCrLf
+    If lBln_FiltreEltRseItmAss Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem Association" & vbCrLf
+    If lBln_FiltreEltRseItmAtb Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem Attribute" & vbCrLf
+    If lBln_FiltreEltRseItmCls Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem Class" & vbCrLf
+    If lBln_FiltreEltRseItmCtlUnt Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem ControllableUnit" & vbCrLf
+    If lBln_FiltreEltRseItmCtlUntDftMdlPrp Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem ControllableUnit DefaultModelProperties" & vbCrLf
+    If lBln_FiltreEltRseItmCtlUntDplUnt Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem ControllableUnit DeploymentUnit" & vbCrLf
+    If lBln_FiltreEltRseItmCtlUntPkg Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem ControllableUnit Package" & vbCrLf
+    If lBln_FiltreEltRseItmCtlUntPkgCtg Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem ControllableUnit Package Category" & vbCrLf
+    If lBln_FiltreEltRseItmCtlUntPkgMdl Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem ControllableUnit Package Model" & vbCrLf
+    If lBln_FiltreEltRseItmCtlUntPkgSubSys Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem ControllableUnit Package SubSystem" & vbCrLf
+    If lBln_FiltreEltRseItmLnk Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem Link" & vbCrLf
+    If lBln_FiltreEltRseItmMsg Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem Message" & vbCrLf
+    If lBln_FiltreEltRseItmMod Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem Module" & vbCrLf
+    If lBln_FiltreEltRseItmObjIns Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem ObjectInstance" & vbCrLf
+    If lBln_FiltreEltRseItmOpr Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem Operation" & vbCrLf
+    If lBln_FiltreEltRseItmPrm Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem Parameter" & vbCrLf
+    If lBln_FiltreEltRseItmRel Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem Relation" & vbCrLf
+    If lBln_FiltreEltRseItmRelCtgDep Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem Relation CategoryDependency" & vbCrLf
+    If lBln_FiltreEltRseItmRelClsRel Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem Relation ClassRelation" & vbCrLf
+    If lBln_FiltreEltRseItmRelClsRelClsDep Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem Relation ClassRelation ClassDependency" & vbCrLf
+    If lBln_FiltreEltRseItmRelClsRelHasRls Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem Relation ClassRelation HasRelationShip" & vbCrLf
+    If lBln_FiltreEltRseItmRelClsRelInhRel Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem Relation ClassRelation InheritRelation" & vbCrLf
+    If lBln_FiltreEltRseItmRelClsRelIntRel Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem Relation ClassRelation InstantiateRelation" & vbCrLf
+    If lBln_FiltreEltRseItmRelConRel Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem Relation ConnectionRelation" & vbCrLf
+    If lBln_FiltreEltRseItmRelDepRel Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem Relation DependencyRelation" & vbCrLf
+    If lBln_FiltreEltRseItmRelDepRelObjFlw Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem Relation DependencyRelation ObjectFlow" & vbCrLf
+    If lBln_FiltreEltRseItmRelModVsbRls Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem Relation ModuleVisibilityRelationShip" & vbCrLf
+    If lBln_FiltreEltRseItmRelRlzRel Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem Relation RealizeRelation" & vbCrLf
+    If lBln_FiltreEltRseItmRelRol Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem Relation Role" & vbCrLf
+    If lBln_FiltreEltRseItmRelTrn Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem Relation Transition" & vbCrLf
+    If lBln_FiltreEltRseItmUseCas Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element RoseItem UseCase" & vbCrLf
+    If lBln_FiltreEltSttMch Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject Element StateMachine" & vbCrLf
+    If lBln_FiltreExtDoc Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> RoseObject External Document" & vbCrLf

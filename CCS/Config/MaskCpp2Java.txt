@@ -1,0 +1,57 @@
+
+# -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+# preparation initiale du fichier source
+
+# convertion des opérateurs
+*=s/->/./g
+
+# suppression des commentaires ligne
+*=s/^\s*\/\/[^\n]*?\n//gms
+*=s/\/\/[^\n]*?\n/\n/gms
+
+# suppression des commentaires bloc
+*=s/\/\*.*?\*\///gms
+
+# suppression des lignes de preprocesseur residuelles
+*=s/^\s*\#.*?$//gms
+
+# suppression des lignes vides restantes
+*=s/\n\s*\n/\n/gms
+*=s/^\s*\n//gms
+
+# reconstitution des lignes brisees (apres suppression de tous les commentaires residuels !!!)
+*=s/([^;}])\s*\n/$1 /gms
+
+# suppression des lignes de controle du compilateur
+*=s/\b__FILE__\b//gms
+*=s/\b__inline__\b//gms
+*=s/\b__LINE__\b//gms
+
+# substitution des qualifieurs obsoletes
+*=s/\bextern\b//gms
+*=s/\bunsigned\b//gms
+
+# substitution des types de base du langage C
+*=s/\blong\b\s+\bint\b/CTypes.CLong/gms
+*=s/\bshort\b\s+\bint\b/CTypes.CShort/gms
+*=s/\bchar\b/CTypes.CChar/gms
+*=s/\bdouble\b/CTypes.CDouble/gms
+*=s/\bfloat\b/CTypes.CFloat/gms
+*=s/\bint\b/CTypes.CInt/gms
+*=s/\blong\b/CTypes.CLong/gms
+*=s/\bshort\b/CTypes.CShort/gms
+*=s/\bvoid\b/CTypes.CVoid/gms
+
+# substitution des declarations de types nommes avec structure
+*=s/\btypedef\b\s+\bstruct\b\s+([_a-zA-Z][_.a-zA-Z0-9]*)\s*{([^}]+)}\s+([_a-zA-Z][_a-zA-Z0-9]*)\s*;/\/\/ @<\\b$3\\b|CTypedefStruct_$3>@\npublic class CTypedefStruct_$3 { \n\/\/ [$1]\n$2\n }/gms
+
+# substitution des declarations de structures
+*=s/\bstruct\b\s+([_a-zA-Z][_.a-zA-Z0-9]*)\s*{([^}]+)}\s*;/\/\/ @<\\bstruct\\b\\s\+\\b$1\\b|CStruct_$1>@\npublic class CStruct_$1 { \n$2\n }/gms
+
+# substitution des declarations de types nommes
+*=s/\btypedef\b\s+([^;]+)\s+([_a-zA-Z][_.a-zA-Z0-9]*)((?:\s*\[[^]]+\])*)\s*;/\n\/\/ @<\\b$2\\b|CTypedef_$2>@\npublic class CTypedef_$2 { \n$1$3 _value_;\n }/gms
+
+# suppression des espaces inutiles
+*=s/  / /g
+
+# -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-

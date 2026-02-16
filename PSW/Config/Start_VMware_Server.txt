@@ -1,0 +1,7 @@
+
+# Demarrage des services VMware
+|start|VMAuthdService|		# VMware Authorization Service
+|start|vmount2|				# VMware Virtual Mount Manager Extended
+|start|vmserverdWin32|		# VMware Registration Service
+|start|VMware NAT Service|		# VMware NAT Service
+|start|VMnetDHCP|			# VMware DHCP Service

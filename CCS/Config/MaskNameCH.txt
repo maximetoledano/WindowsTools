@@ -1,0 +1,3 @@
+
+# passage en minuscule du nom de fichier
+tr/A-Z/a-z/

@@ -1,0 +1,1 @@
+    If lBln_Filtre@<NomEltMdl>@ Then vStr_Valeurs = vStr_Valeurs & vbTab & vbTab & "==> @<DscEltMdl>@" & vbCrLf

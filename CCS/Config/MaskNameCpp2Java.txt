@@ -1,0 +1,6 @@
+
+# passage en minuscule du nom de fichier
+tr/A-Z/a-z/
+
+# transformation de l'extension de 'cpp' en 'java'
+s/\.cpp\s*$/.java/

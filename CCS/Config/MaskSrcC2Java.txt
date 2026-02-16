@@ -1,0 +1,36 @@
+
+# -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
+# preparation initiale du fichier source
+
+# suppression des commentaires ligne
+*=s/^\s*\/\/[^\n]*?\n//gms
+*=s/\/\/[^\n]*?\n/\n/gms
+
+# suppression des commentaires bloc
+*=s/\/\*.*?\*\///gms
+
+# suppression des espaces inutiles
+*=s/\n\s+/\n/gms
+*=s/\s+\n/\n/gms
+*=s/\s\s+/ /gs
+*=s/\s+;/;/gs
+
+# concatenation des blocs de code
+*=s/\s*\(\s*\n/ \(/gms
+*=s/\n\s*\)\s*/\) /gms
+*=s/\n\s*,/,/gms
+*=s/,\s*\n/, /gms
+
+# suppression des lignes vides restantes
+*=s/\n^\s*\n/\n/gms
+
+# conversion de tout le code en minuscule
+#*=tr/A-Z/a-z/
+
+# suppression des lignes de preprocesseur residuelles
+*=s/^\s*\#.*?$//gms
+
+# suppression des declarations parasites
+*=s/^\s*extern\s.*?__threadid.*?;\s*$//gms
+
+# -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-

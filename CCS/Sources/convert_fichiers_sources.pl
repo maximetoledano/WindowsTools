@@ -1,0 +1,232 @@
+# ____________________________________________________________
+#
+# Script de convertion de fichiers de sources a l'aide de
+# masques "embarques" dans les fichiers eux-memes.
+# ____________________________________________________________
+
+# ____________________________________________________________
+# Declaration des librairies standard
+
+use IO::File;
+use File::Path;
+use File::Copy;
+
+use strict "vars";
+#use strict "refs";
+use integer;
+
+# ____________________________________________________________
+# Prise en compte de l'environnement d'appel
+
+# recuperation commande lancee
+my $nom_cmd = $0;
+
+# recuperation des elements specifiques de l'environnement
+my $path_tmp = $ENV{CCSTempDir};
+my $path_rep_src_files = $ENV{CCSRepFichSrc};
+my $path_rep_dst_files = $ENV{CCSRepFichDst};
+my $path_list_src_files = $ENV{CCSFichListSrcFiles};
+my $path_mask_src_tags = $ENV{CCSMaskSrcTags};
+my $path_result = $ENV{CCSFichResult};
+my $path_tmp_src = $ENV{CCSFichTmpSrc};
+my $path_tmp_1 = $ENV{CCSFichTmp1};
+my $path_tmp_2 = $ENV{CCSFichTmp2};
+
+# purge des eventuels '"' contenus dans les path recus
+$path_tmp =~ s/\"//g;
+$path_tmp =~ s/\\/\//g;
+$path_rep_src_files =~ s/\"//g;
+$path_rep_src_files =~ s/\\/\//g;
+$path_rep_dst_files =~ s/\"//g;
+$path_rep_dst_files =~ s/\\/\//g;
+$path_list_src_files =~ s/\"//g;
+$path_list_src_files =~ s/\\/\//g;
+$path_mask_src_tags =~ s/\"//g;
+$path_mask_src_tags =~ s/\\/\//g;
+$path_result =~ s/\"//g;
+$path_result =~ s/\\/\//g;
+$path_tmp_src =~ s/\"//g;
+$path_tmp_src =~ s/\\/\//g;
+$path_tmp_1 =~ s/\"//g;
+$path_tmp_1 =~ s/\\/\//g;
+$path_tmp_2 =~ s/\"//g;
+$path_tmp_2 =~ s/\\/\//g;
+
+# ____________________________________________________________
+# Corps du programme
+
+my $nb_files = 0;
+
+# tableau des masques a toutes les tags pour transformation du fichier source
+my @atabl_globtags;
+my $nb_globtags = 0;
+
+my $nb_tags = 0;
+my $nb_masks = 0;
+my $nb_files = 0;
+
+my $sep_result = "\n-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-\n";
+
+autoflush STDOUT 1;
+
+parse_all_src_files();
+
+# ____________________________________________________________
+# SUB: extract_masks ( )
+
+sub extract_masks
+{
+  my $hdl_mask_src_tags;
+  my $line;
+  
+  # traitement des masques sur elements a extraire
+  $hdl_mask_src_tags = new IO::File $path_mask_src_tags, O_RDONLY;
+  unless (defined $hdl_mask_src_tags)
+  { die "$nom_cmd: Masques des elements de sources a extraire incorrecte ($path_mask_src_tags)\n"; }
+
+  $/ = "\n";
+
+  # chargement en memoire des masques d'elements a extraire
+  while ($line = $hdl_mask_src_tags->getline)
+  {
+    my $regexp_eval;
+    my $regexp_parse;
+    my $tag;
+    my $pos_tag;
+    my $mask;
+    
+    # suppression fin de ligne Windows
+    chomp $line;
+    
+    # suppression des lignes vides ou de commentaires (lignes commencant par '#')
+    $_ = $line;
+    if ((! /^\s*$/) and (! /^\#/))
+    {
+      # -------------------------------- #
+      # Format des lignes: '*=eval_expr' #
+      # -------------------------------- #
+      if (/^\s*\*\s*=(.+)$/)
+      {
+        # ajout de l'expression dans le tableau des tags d'initialisation
+        push @atabl_globtags, "$1";
+        $nb_globtags ++;
+      }
+      else
+      { die "$nom_cmd: Parametrage des tags/masques incorrect ($line)\n"; }
+      
+      $nb_masks ++;
+    }
+  }
+  
+  if (defined $hdl_mask_src_tags) { undef $hdl_mask_src_tags; }
+}
+
+# ____________________________________________________________
+# SUB: parse_all_src_files ( )
+
+sub parse_all_src_files
+{
+  my $hdl_stdout;
+  my $path_file;
+  my $hdl_list_src_files;
+  my $line;
+  
+  $hdl_stdout = select();
+  
+  $hdl_list_src_files = new IO::File $path_list_src_files, O_RDONLY;
+  unless (defined $hdl_list_src_files)
+  { die "$nom_cmd: Fichier des sources a traiter incorrect ($path_list_src_files)\n"; }
+  
+  # parcours des noms de fichiers de sources candidats
+  while ($line = $hdl_list_src_files->getline)
+  {
+    # suppression fin de ligne Windows
+    chomp $line;
+    
+    # suppression des lignes vides ou de commentaires (lignes commencant par '#')
+    $_ = $line;
+    if ((! /^\s*$/) and (! /^\#/))
+    {
+      # purge des eventuels '"' parasites
+      $line =~ s/\"//g;
+      $line =~ s/\\/\//g;
+      
+      # traitement du fichier candidat
+      parse_src_file($line);
+      
+      $nb_files ++;
+    }
+  }
+  
+  if (defined $hdl_list_src_files) { undef $hdl_list_src_files; }
+  
+  select ($hdl_stdout);
+}
+
+# ____________________________________________________________
+# SUB: parse_src_file ( )
+
+sub parse_src_file
+{
+  my ($path_src_file) = @_;
+  my $rel_path_file;
+  my $rel_path_rep;
+  my $path_dst_file;
+  my $hdl_stdout;
+  my $tag;
+  my $pos_tag;
+  my $pos;
+  my $mask;
+  my $nb_elts;
+  my $cpt;
+  my $result;
+  my $read_mode;
+
+  # extraction du chemin relatif du fichier a traiter
+  ($rel_path_file = $path_src_file) =~ s/$path_rep_src_files\///i;
+  
+  # extraction des sous-repertoires eventuels
+  ($rel_path_rep = $path_src_file) =~ s/$path_rep_src_files\/(.+)\/[^\/]+$/$1/i
+    or $rel_path_rep = "";
+  
+  # memorisation de la sortie standard actuelle
+  $hdl_stdout = select();
+  
+  # preparation d'une lecture d'une traite des fichiers
+  $read_mode = $/;
+  undef $/;
+  
+  # generation du fichier destination par filtrage
+  if (@atabl_globtags)
+  {
+    my $hdl_travail = new IO::File $path_dst_file, O_WRONLY|O_CREAT;
+    unless (defined $hdl_travail)
+    { die "$nom_cmd: Creation fichier filtre incorrecte ($path_dst_file)\n"; }
+    
+    select $hdl_travail;
+    
+    # ouverture du fichier d'origine
+    open(SOURCE, "< $path_src_file")
+        or die "$nom_cmd: Ouverture fichier source incorrecte ($path_src_file)\n";
+    
+    # preparation du fichier d'analyse, a partir du fichier source,
+    # et par application des tags globaux
+    while (<SOURCE>)
+    {
+      # recherche de l'expression dans le fichier lu
+      foreach $tag (@atabl_globtags)
+      { eval $tag; }
+      print;
+    }
+    
+    # fermeture du fichier ouvert
+    close(SOURCE);
+    
+    if (defined $hdl_travail) { undef $hdl_travail; }
+  }
+
+  select $hdl_stdout;
+  $/ = $read_mode;
+}
+
+# ____________________________________________________________

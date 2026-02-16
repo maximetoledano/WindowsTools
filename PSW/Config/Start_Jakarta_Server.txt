@@ -1,0 +1,14 @@
+
+# Demarrage du pilote de site web local (Apache 2)
+|application|F:\Apache Group\Apache2\bin\ApacheMonitor.exe|
+
+# Demarrage du site web local (Apache 2)
+|start|Apache2|
+
+# Demarrage de la base de donnees ()
+
+# Demarrage du serveur de mail (James)
+|application|F:\Apache Group\James-2.1.3\bin\run.bat|
+
+# Demarrage du serveur de pages JSP (Tomcat)
+|application|F:\Apache Group\Jakarta-Tomcat-5.0.16\bin\startup.bat|

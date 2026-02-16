@@ -1,0 +1,4 @@
+METH|methode1|com.pif.referentiel.package1.classe1.methode1|classe2|com.pif.referentiel.package2.classe2.methode2
+METH|methode2|com.pif.referentiel.package2.classe2.methode2|classe3|com.pif.referentiel.package3.classe3.methode3
+METH|methode4|com.pif.referentiel.package4.classe4.methode4|classe4|com.pif.referentiel.package3.classe3.methode3
+METH|methode3|com.pif.referentiel.package2.classe3.methode1|classe3|com.pif.referentiel.package3.classe3.methode3

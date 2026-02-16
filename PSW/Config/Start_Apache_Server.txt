@@ -1,0 +1,6 @@
+
+# Demarrage du pilote de site web local (Apache 2)
+|application|F:\Apache Group\Apache2\bin\ApacheMonitor.exe|
+
+# Demarrage du site web local (Apache 2)
+|start|Apache2|

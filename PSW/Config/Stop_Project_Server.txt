@@ -1,0 +1,13 @@
+
+# Arret du serveur (Project Server 2002)
+|stop|PjSchSvc|
+|stop|PjSessionMgr|
+|stop|PjTraceSvc|
+|stop|PjViewNotify|
+
+# Arret de la base de donnees (SQL Server 2000)
+|stop|MSSQLSERVER|
+|stop|MSSQLServerOLAPService|
+
+# Arret du site web local (IIS 5)
+|stop|W3SVC|

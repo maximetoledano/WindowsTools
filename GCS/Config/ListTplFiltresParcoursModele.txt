@@ -1,0 +1,10 @@
+
+SeparBlocs = E:\Outils\GCS\Travail\FiltresParcoursModeles\SeparBlocs.tpl
+
+DeclVarBool = E:\Outils\GCS\Travail\FiltresParcoursModeles\DeclVarBool.tpl
+
+DeclInitVar = E:\Outils\GCS\Travail\FiltresParcoursModeles\DeclInitVar.tpl
+
+DeclPrpCls = E:\Outils\GCS\Travail\FiltresParcoursModeles\DeclPrpCls.tpl
+
+MajValeursToString = E:\Outils\GCS\Travail\FiltresParcoursModeles\MajValeursToString.tpl

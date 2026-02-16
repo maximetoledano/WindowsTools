@@ -1,0 +1,7 @@
+
+# Arret des services VMware
+|stop|VMnetDHCP|			# VMware DHCP Service
+|stop|VMware NAT Service|		# VMware NAT Service
+|stop|vmserverdWin32|		# VMware Registration Service
+|stop|vmount2|				# VMware Virtual Mount Manager Extended
+|stop|VMAuthdService|		# VMware Authorization Service

@@ -1,0 +1,6 @@
+
+# Demarrage de la base de donnees (MySQL)
+|start|MySql|
+
+# Demarrage du controleur dedie (MySQL Control Center)
+|application|F:\MySQL\MySqlCc\MySqlCc.exe|
